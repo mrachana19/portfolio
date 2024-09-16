@@ -5,9 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -20,7 +17,6 @@
 
 html {
     font-size: 62.5%;
-    overflow-x: hidden;
     width: 100vw;
     scroll-behavior: smooth;
 }
@@ -28,6 +24,7 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 .header {
@@ -77,7 +74,6 @@ section {
 .home {
     display: flex;
     align-items: center;
-    padding: 0 9%;
     justify-content: space-between;
 }
 
@@ -119,233 +115,87 @@ section {
 }
 
 .btn-box {
-    position: relative;
     display: flex;
     justify-content: space-between;
     width: 34.5rem;
-    height: 5rem;
 }
 
 .btn-box .btn {
-    position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 15rem;
-    height: 100%;
+    height: 5rem;
     background: var(--main-color);
     border: .2rem solid var(--main-color);
     border-radius: .8rem;
     font-size: 1.8rem;
     font-weight: 600;
-    letter-spacing: .1rem;
     color: var(--bg-color);
-    z-index: 1;
-    overflow: hidden;
     transition: .5s;
 }
 
 .btn-box .btn:hover {
     color: var(--main-color);
-} 
-
-.btn-box .btn:nth-child(2) {
-    background: transparent;
-    color: var(--main-color);
-}
-
-.btn-box .btn:nth-child(2):hover {
-    color: var(--bg-color);
-}
-
-.btn-box .btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
     background: var(--bg-color);
-    z-index: -1;
-    transition: .5s;
 }
 
-.btn-box .btn:hover::before {
-    width: 100%;
-}
-
-.home-sci {
-    position: absolute;
-    bottom: 4rem;
-    width: 22rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.home-sci a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: .2rem solid var(--main-color);
-    border-radius: 50%;
-    font-size: 20px;
-    color: var(--main-color);
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.home-sci a:hover {
-    color: var(--bg-color);
-}
-
-.home-sci a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--main-color);
-    z-index: -1;
-    transition: .5s;
-}
-
-.home-sci a:hover::before {
-    width: 100%;
-}
-
-/* About Section */
-.about {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    gap: 1rem;
-    background: var(--second-bg-color);
-    padding-bottom: 6rem;
-    flex-wrap: wrap;
-}
-
-.about-details {
-    width: 60%;
-}
-
-.heading {
-    font-size: 5rem;
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
-span {
-    color: var(--main-color);
-}
-
-.about-img {
-    position: relative;
-    width: 30rem;
-    height: 30rem;
-    border-radius: 50;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-img img {
-    width: 90%;
-    border-radius: 50%;
-    border: .2rem solid var(--main-color);
-}
-
-.about-img .circle-spin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border-top: .2rem solid var(--second-bg-color);
-    border-bottom: .2rem solid var(--second-bg-color);
-    border-left: .2rem solid var(--main-color);
-    border-right: .2rem solid var(--main-color);
-    animation: aboutSpinner 8s linear infinite;
-}
-
-.about-content {
-    text-align: center;
-}
-
-.about-content h3 {
-    font-size: 2.6rem;
-}
-
-.about-content p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
-}
-
-/* Portfolio (Projects) Section */
-.portfolio-container {
+/* Portfolio and Publications */
+.portfolio-container, .publication-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns by default */
-    gap: 2.5rem; /* Gap between items */
-    padding: 0 5rem; /* Adjust padding */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 5rem;
 }
 
-.portfolio-box {
+.portfolio-box, .publication-box {
     position: relative;
-    background: var(--second-bg-color); /* Light gray background */
-    border-radius: 15px; /* Rounded corners */
-    overflow: hidden; /* Ensure overflow is hidden */
-    transition: transform .3s ease-in-out; /* Smooth hover effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    background: var(--second-bg-color);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform .3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-box img {
+.portfolio-box img, .publication-box img {
     width: 100%;
-    height: 200px; /* Fixed height for all images */
-    object-fit: cover; /* Ensure the image covers the box without distortion */
-    display: block; /* Ensures image display consistency */
-    border-radius: 15px; /* Aligns with portfolio-box */
-    transition: .5s ease; /* Smooth image hover effect */
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+    transition: .5s ease;
 }
 
-.portfolio-box:hover img {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+.portfolio-box:hover img, .publication-box:hover img {
+    transform: scale(1.1);
 }
 
-.portfolio-box .portfolio-layer {
+.portfolio-layer, .portfolio-layer {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .35), var(--second-bg-color)); /* Gradient overlay */
+    background: linear-gradient(rgba(0, 0, 0, .35), var(--second-bg-color));
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     padding: 0 4rem;
-    transform: translateY(100%); /* Hidden initially */
-    transition: .5s ease; /* Smooth transition */
+    transform: translateY(100%);
+    transition: .5s ease;
 }
 
-.portfolio-box:hover .portfolio-layer {
-    transform: translateY(0); /* Show overlay on hover */
+.portfolio-box:hover .portfolio-layer, .publication-box:hover .portfolio-layer {
+    transform: translateY(0);
 }
 
-.portfolio-layer h4 {
+.portfolio-layer h4, .portfolio-layer h4 {
     font-size: 2.25rem;
 }
 
-.portfolio-layer p {
+.portfolio-layer p, .portfolio-layer p {
     font-size: 1.25rem;
     margin: .3rem 0 1rem;
 }
@@ -365,51 +215,16 @@ span {
     border-radius: 50%;
 }
 
-/* Publications Section */
-.publication-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns by default */
-    gap: 2.5rem; /* Same gap as portfolio */
-    padding: 0 5rem; /* Same padding */
-}
-
-.publication-box {
-    background: var(--second-bg-color); /* Same background */
-    border-radius: 15px; /* Rounded corners */
-    overflow: hidden; /* Ensure overflow is hidden */
-    transition: transform .3s ease-in-out; /* Smooth hover effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
-}
-
-.publication-box img {
-    width: 100%;
-    height: 200px; /* Fixed height for all images */
-    object-fit: cover; /* Consistent image display */
-    display: block; /* Consistent block display */
-    border-radius: 15px; /* Align with .publication-box */
-    transition: .5s ease; /* Smooth hover effect */
-}
-
-.publication-box:hover img {
-    transform: scale(1.1); /* Zoom effect on hover */
-}
-
 /* Responsive adjustments */
 @media (max-width: 1024px) {
     .portfolio-container, .publication-container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .portfolio-container, .publication-container {
-        grid-template-columns: repeat(1, 1fr); /* One column for mobile screens */
-    }
-}
-
-@keyframes aboutSpinner {
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
+        grid-template-columns: 1fr;
     }
 }
 
