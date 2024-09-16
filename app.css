@@ -13,7 +13,7 @@
 
 :root {
     --bg-color: #ffffff; /* White background */
-    --second-bg-color: #87CEEB; /* Light blue background */
+    --second-bg-color: #87CEEB; /* Light gray background */
     --text-color: #000000; /* Black text color */
     --main-color: #0d1b2a; /* Dark blue for accents */
 }
@@ -30,7 +30,6 @@ body {
     color: var(--text-color);
 }
 
-/* Header Styles */
 .header {
     position: fixed;
     top: 0;
@@ -75,7 +74,6 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-/* Home Section */
 .home {
     display: flex;
     align-items: center;
@@ -120,7 +118,6 @@ section {
     margin: 2rem 0 4rem;
 }
 
-/* Button Styles */
 .btn-box {
     position: relative;
     display: flex;
@@ -181,7 +178,6 @@ section {
     width: 100%;
 }
 
-/* Social Media Icons */
 .home-sci {
     position: absolute;
     bottom: 4rem;
@@ -228,7 +224,6 @@ section {
     width: 100%;
 }
 
-/* About Section */
 .about {
     display: flex;
     justify-content: space-between;
@@ -298,7 +293,6 @@ span {
     margin: 2rem 0 3rem;
 }
 
-/* Education Section */
 .education {
     display: flex;
     justify-content: space-between;
@@ -386,74 +380,10 @@ span {
     padding-top: .5rem;
 }
 
-.education-content ul,
-.education-content ul li {
-    font-size: 1.8rem; /* Slightly larger font for list items */
-    line-height: 1.8; /* More line spacing for readability */
-    list-style-type: disc; /* Adds bullet points to lists */
-    margin-left: 2rem; /* Indents lists for clarity */
-}
-
-/* Certifications Section Styles */
-.certifications {
-    padding: 4rem 9%; /* Add padding */
-    background-color: var(--second-bg-color); /* Example background color */
-}
-
-.certifications-container {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    background-color: var(--bg-color); /* Background color for certifications */
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
-
-.certification-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.certification-content {
-    background: var(--bg-color);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px; /* Adjust width as needed */
-    text-align: left;
-}
-
-.certification-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.certification-content li {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background-color: var(--second-bg-color);
-    border-radius: 5px;
-}
-
-.certification-content h4 {
-    font-size: 1.8rem;
-    color: var(--main-color); /* Text color */
-    margin-bottom: 0.5rem;
-}
-
-.certification-content p {
-    font-size: 1.4rem;
-    color: var(--text-color); /* Subtext color */
-}
-
 /* Tech Stack Section */
 .tech-stack {
     background: var(--second-bg-color);
-    padding: 5rem 9%; /* Adjust padding as needed */
+    padding: 5rem 9%;
     text-align: left;
     color: var(--text-color);
 }
@@ -501,71 +431,77 @@ span {
     }
 }
 
-/* Portfolio Section */
-.portfolio {
-    min-height: auto;
-    padding-bottom: 7rem;
-}
-
-.portfolio h2 {
-    margin-bottom: 4rem;
-}
-
-.portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-}
-
-.portfolio-box img {
-    width: 100%;
-    height: 200px; /* Set a fixed height for all images */
-    object-fit: cover; /* Ensures the image covers the box without distortion */
-    display: block;
-    border-radius: 15px; /* Align with .portfolio-box */
-    transition: .5s ease; 
-}
-
-.portfolio-box:hover img {
-    transform: scale(1.1);
-}
-
 /* Footer Styles */
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 9%;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
     background: var(--bg-color);
     color: var(--text-color);
+    border-top: 1px solid var(--main-color); /* Optional border at the top for separation */
 }
 
 .footer .btn-box, .footer .home-sci {
     display: flex;
     align-items: center;
-    gap: 20px;  /* Spacing between icons and the button */
+    gap: 20px; /* Spacing between icons and buttons */
 }
 
 .footer .btn-box a, .footer .home-sci a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;  /* Size of the icons */
-    height: 40px;  /* Size of the icons */
-    border-radius: 50%;  /* Makes the icons round */
-    background-color: #00abf0;  /* Blue background for the icons */
-    color: var(--bg-color);  /* Text color inside the icons */
-    font-size: 20px;  /* Icon font size */
-    border: none;  /* No border for the icons */
-    text-decoration: none;  /* No underline for links */
+    width: 40px; /* Size of the icons */
+    height: 40px; /* Size of the icons */
+    border-radius: 50%; /* Makes the icons round */
+    background-color: #00abf0; /* Blue background for the icons */
+    color: var(--bg-color); /* Text color inside the icons */
+    font-size: 20px; /* Icon font size */
+    text-decoration: none; /* No underline for links */
+    transition: 0.3s; /* Smooth transition on hover */
+}
+
+.footer .btn-box a {
+    width: auto; /* Auto width for the resume button */
+    padding: 10px 20px; /* Padding inside the resume button */
+    border-radius: 20px; /* Rounded corners for the button */
+    background: transparent; /* Transparent background for the button */
+    border: 2px solid var(--main-color); /* Blue border for the button */
+    font-size: 16px; /* Font size for the button text */
+    color: var(--main-color); /* Blue text color for the button */
+}
+
+.footer .btn-box a:hover, .footer .home-sci a:hover {
+    background-color: var(--main-color); /* Blue background on hover */
+    color: var(--bg-color); /* White text on hover */
 }
 
 .footer p {
-    flex-grow: 1;  /* Allows the copyright text to take available space */
-    text-align: center;  /* Centers the copyright text */
-    margin: 0 20px;  /* Margin around the text */
+    flex-grow: 1; /* Allows the copyright text to take available space */
+    text-align: center; /* Centers the text */
+    margin: 0 20px; /* Margin around the text */
+    font-size: 1.4rem; /* Adjusted font size */
+    padding: 1rem 0; /* Padding for better spacing */
+}
+
+.footer a {
+    text-decoration: none; /* Ensures links are not underlined */
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stacks the elements vertically on small screens */
+        align-items: center; /* Aligns items centrally */
+        padding: 2rem; /* Increased padding for smaller screens */
+    }
+    .footer .btn-box, .footer .home-sci {
+        justify-content: center; /* Centers the buttons and icons horizontally */
+    }
+    .footer p {
+        margin-bottom: 1rem; /* Adds bottom margin to text on smaller screens */
+    }
 }
 
 @keyframes aboutSpinner {
