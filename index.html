@@ -1,267 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rachana's Portfolio</title>
+    <title>Yudheksha's Bookish Portfolio</title>
     <link rel="stylesheet" href="app.css">
-
-    <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <style>
-        /* Modified styles for a new UI look */
-
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .header {
-            position: sticky;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .header .logo {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-
-        .navbar {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-
-        .navbar a:hover {
-            color: #f0a500;
-        }
-
-        .home {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            padding: 4rem 2rem;
-            background-color: #fff;
-            height: 100vh;
-        }
-
-        .home-info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            max-width: 600px;
-        }
-
-        .my-img {
-            flex: 1;
-            max-width: 400px;
-        }
-
-        .my-img img {
-            width: 100%;
-            border-radius: 20px;
-        }
-
-        .btn-box {
-            margin-top: 1rem;
-        }
-
-        .btn {
-            background-color: #f0a500;
-            color: #fff;
-            padding: 0.7rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-right: 1rem;
-        }
-
-        .btn:hover {
-            background-color: #333;
-        }
-
-        .section {
-            padding: 4rem 2rem;
-            background-color: #fff;
-        }
-
-        .heading {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 2rem;
-        }
-
-        .tech-stack .tech-category {
-            background-color: #f4f4f4;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .tech-stack .tech-category:hover {
-            transform: translateY(-10px);
-        }
-
-        .portfolio-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .portfolio-box {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .portfolio-box:hover {
-            transform: translateY(-10px);
-        }
-
-        .portfolio-layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-
-        .portfolio-box:hover .portfolio-layer {
-            opacity: 1;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: #fff;
-        }
-
-        footer .btn-box a {
-            color: #f0a500;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Header Design -->
-    <header class="header">
-        <a href="#" class="logo">Port<span>folio.</span></a>
+    <!-- Header -->
+    <header class="header top">
+        <a href="#" class="logo">Book<span>Haven</span></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
-            <a href="#about">About me</a>
+            <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
-            <a href="#tech-stack">Tech Stack</a>
-            <a href="#portfolio">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
         </nav>
     </header>
 
-    <!-- Home Section Design -->
+    <!-- Home Section -->
     <section class="home" id="home">
-        <div class="my-img">
-            <img src="./assets/memoji.jpg" alt="profile image">
-        </div>
         <div class="home-info">
-            <h1>Hi, <br> I'm <span>Rachana Mahapatra</span></h1>
-            <h3 class="text-animate">I'm a <span class="multiple-text"></span></h3>
-            <p>MS BA & AI grad student at University of Texas at Dallas | Expertise in Analytics, Data Engineering, Data Science
-                and Machine Learning.</p>
-            <div class="btn-box">
-                <a href="mailto:rxm220097@utdallas.edu" class="btn">Contact Me</a>
-                <a href="https://drive.google.com/file/d/1qssso37jUnphGk2WtkfxY0eesXVDmZYx/view?usp=sharing"
-                    class="btn" target="_blank">My Resume</a>
+            <div class="home-content left">
+                <h1>Hello! I’m <span>Yudheksha GK</span></h1>
+                <h3 class="text-animate">I love being a <span class="multiple-text"></span></h3>
+                <p>An avid learner and developer with a love for books, vintage aesthetics, and clean code. Currently diving deep into data science, machine learning, and software development.</p>
+                <div class="btn-box">
+                    <a href="mailto:yugokavi@iu.edu" class="btn">Get In Touch</a>
+                    <a href="https://drive.google.com/file/d/1OH3rDLyWd9wrVsmRKA2Ob20hZuBGTCUe/view?usp=sharing" class="btn" target="_blank">View My Resume</a>
+                </div>
+            </div>
+
+            <div class="my-img right">
+                <img src="./assets/memoji.jpg" alt="profile image">
             </div>
         </div>
     </section>
 
-    <!-- About Section Design -->
-    <section class="section about" id="about">
-        <h2 class="heading">About <span>Me</span></h2>
-        <div class="about-details">
-            <p style="text-align: justify;">
-                Hey there! I'm Rachana, a Data Engineer and a Master's student in Business Analytics at The University of Texas at Dallas. With over 3 years of experience working as a Business Analyst and Data Engineer across diverse industries like travel, healthcare, and finance, I specialize in building robust data pipelines, optimizing ETL processes, and utilizing Machine Learning and AI to transform data into impactful insights.
-                In my current role as a Data Engineer, I thrive on solving complex data challenges and creating solutions that drive meaningful results. My work is driven by a passion for innovation and a deep curiosity for how data can revolutionize decision-making.
-                Beyond my professional life, I’m an ambivert who finds joy in both deep conversations and creative pursuits. I love painting, writing, and constantly seeking new experiences. My adventurous spirit has led me to skydiving, parasailing, deep water walking, and rafting, always pushing me to explore beyond the ordinary.
-                If you’re intrigued by data, creativity, or a good adventure story, let’s connect and see where our paths might cross!
-            </p>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-img left">
+            <img src="./assets/profile.jpg" alt="about image">
+        </div>
+
+        <div class="about-details right">
+            <h2 class="heading">About <span>Me</span></h2>
+            <div class="about-content">
+                <p>
+                    Welcome to my little corner of the internet! Here, I'm blending my passion for technology and storytelling. Whether it's building robust applications or curating stories from data, I strive to make each project a masterpiece. If you're a fellow book lover or a tech enthusiast, let's connect!
+                </p>
+            </div>
         </div>
     </section>
 
-    <!-- Experience Section Design -->
-    <section class="section" id="experience">
-        <h2 class="heading"><span>Experience</span></h2>
-        <div class="experience-container">
-            <!-- Experience entries go here -->
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="heading">Skills</h2>
+        <div class="skill-bar">
+            <div class="skill-title">Python</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 90%;"></div>
+            </div>
         </div>
+        <!-- Add more skill bars as needed -->
     </section>
 
-    <!-- Tech Stack Section Design -->
-    <section id="tech-stack" class="section tech-stack">
-        <h2 class="heading">Tech Stack</h2>
-        <div class="tech-categories">
-            <!-- Tech Stack categories go here -->
-        </div>
-    </section>
-
-    <!-- Portfolio Section Design -->
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading"><span>Projects</span></h2>
-        <div class="portfolio-container">
-            <!-- Portfolio items go here -->
-        </div>
-    </section>
-
-    <!-- Publications Section Design -->
-    <section class="publications" id="publications">
-        <h2 class="heading"><span>Publications</span></h2>
-        <div class="portfolio-container">
-            <!-- Publications items go here -->
-        </div>
-    </section>
-
-    <!-- Footer Design -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="btn-box">
             <a href="https://drive.google.com/file/d/1OH3rDLyWd9wrVsmRKA2Ob20hZuBGTCUe/view?usp=sharing">My Resume</a>
             <a href="https://www.linkedin.com/in/yudheksha" target="_blank"><i class="bx bxl-linkedin"></i></a>
             <a href="https://github.com/yudheksha" target="_blank"><i class='bx bxl-github'></i></a>
         </div>
-        <p>Copyright &copy; 2024 by Yudheksha | All Rights Reserved.</p>
+        <div>
+            <p>&copy; 2024 Yudheksha GK. All rights reserved.</p>
+            <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
     </footer>
 
     <script src="app.js"></script>
 </body>
-
 </html>
