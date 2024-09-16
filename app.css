@@ -394,27 +394,28 @@ span {
     margin-left: 2rem; /* Indents lists for clarity */
 }
 
+
 /* Certifications Section Styles */
 .certifications {
-    padding: 4rem 9%; /* Add padding */
-    background-color: var(--second-bg-color); /* Example background color */
+    padding: 4rem 9%;
+    background-color: var(--second-bg-color);
 }
 
 .certifications-container {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    background-color: var(--bg-color); /* Background color for certifications */
+    background-color: var(--bg-color);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .certification-box {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 2rem;
+    justify-content: space-around; /* Align items in one line */
+    gap: 2rem; /* Spacing between items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
     margin-top: 2rem;
 }
 
@@ -423,32 +424,21 @@ span {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px; /* Adjust width as needed */
-    text-align: left;
-}
-
-.certification-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.certification-content li {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background-color: var(--second-bg-color);
-    border-radius: 5px;
+    width: 150px; /* Smaller width for square tiles */
+    text-align: center; /* Center-align text */
 }
 
 .certification-content h4 {
-    font-size: 1.8rem;
-    color: var(--main-color); /* Text color */
+    font-size: 1.6rem; /* Adjusted font size */
+    color: var(--main-color);
     margin-bottom: 0.5rem;
 }
 
 .certification-content p {
-    font-size: 1.4rem;
-    color: var(--text-color); /* Subtext color */
+    font-size: 1.2rem; /* Adjusted font size */
+    color: var(--text-color);
 }
+
 
 /* Tech Stack Section */
 .tech-stack {
