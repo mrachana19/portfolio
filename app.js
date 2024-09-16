@@ -3,28 +3,29 @@ let navLinks = document.querySelectorAll("header nav a");
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
+// Toggle navbar on menu icon click
 menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 };
 
+// Update "Contact Me" button with dynamic email content
 document.addEventListener("DOMContentLoaded", function () {
   const contactButton = document.querySelector('.btn-box a[href^="mailto:"]');
   contactButton.addEventListener("click", function (event) {
-    // You can set subject and body dynamically if needed
-    const subject = encodeURIComponent(
-      "Exciting Opportunity! We'd like to offer you the position of ..."
-    );
+    // Set subject and body dynamically for the email
+    const subject = encodeURIComponent("Let's Connect!");
     const body = encodeURIComponent(
-      "Dear Yudheksha,\n\nWe are pleased to extend the following offer to you..."
+      "Hi Rachana,\n\nI came across your portfolio and would love to discuss opportunities and collaborations."
     );
-    this.href = `mailto:yugokavi@iu.edu?subject=${subject}&body=${body}`;
+    this.href = `mailto:rachana.mahapatra@utdallas.edu?subject=${subject}&body=${body}`;
 
     // Log or handle the click event as needed
     console.log("Contact Me button was clicked.");
   });
 });
 
+// Highlight active section link in the navbar while scrolling
 window.onscroll = () => {
   sections.forEach((sec) => {
     let top = window.scrollY;
@@ -42,10 +43,12 @@ window.onscroll = () => {
     }
   });
 
+  // Remove the menu icon active class on scroll
   menuIcon.classList.remove("bx-x");
   navbar.classList.remove("active");
 };
 
+// Scroll reveal animations configuration
 ScrollReveal({
   reset: true,
   distance: "15px",
@@ -58,15 +61,15 @@ ScrollReveal().reveal(".right", { origin: "right" });
 ScrollReveal().reveal(".top", { origin: "top" });
 ScrollReveal().reveal(".bottom", { origin: "bottom" });
 
+// Typed.js for typing animation in the home section
 const typed = new Typed(".multiple-text", {
   strings: [
-    "Coder",
-    "Software Developer",
-    "Full Stack Developer",
-    "Data Analyst",
-    "Machine Learning Engineer",
+    "Data Engineer",
+    "Business Analyst",
+    "Machine Learning Enthusiast",
+    "Data Science Professional",
+    "Creative Problem Solver",
   ],
-
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
