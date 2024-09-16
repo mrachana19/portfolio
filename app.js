@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "Exciting Opportunity! We'd like to offer you the position of ..."
     );
     const body = encodeURIComponent(
-      "Dear Yudheksha,\n\nWe are pleased to extend the following offer to you..."
+      "Dear Rachana,\n\nWe are pleased to extend the following offer to you..."
     );
-    this.href = `mailto:yugokavi@iu.edu?subject=${subject}&body=${body}`;
+    this.href = `mailto:rachanamahapatra197@gmail.com?subject=${subject}&body=${body}`;
 
     // Log or handle the click event as needed
     console.log("Contact Me button was clicked.");
@@ -60,10 +60,10 @@ ScrollReveal().reveal(".bottom", { origin: "bottom" });
 
 const typed = new Typed(".multiple-text", {
   strings: [
-    "Coder",
-    "Software Developer",
-    "Full Stack Developer",
-    "Data Analyst",
+    "Problem-Solver",
+    "Data Engineer",
+    "Database Developer",
+    "Business Analyst",
     "Machine Learning Engineer",
   ],
 
