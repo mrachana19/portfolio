@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&display=swap');
 
 * {
     margin: 0;
@@ -8,260 +9,248 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif; /* Classic book-like font */
 }
 
 :root {
-    --bg-color: #ffffff; /* White background */
-    --second-bg-color: #87CEEB; /* Light gray background */
-    --text-color: #000000; /* Black text color */
-    --main-color: #0d1b2a; /* Dark blue for accents */
-}
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-    width: 100vw;
-    scroll-behavior: smooth;
+    --bg-color: #f5f1e7; /* Light cream for background */
+    --primary-color: #6d4c41; /* Warm brown */
+    --accent-color: #d7ccc8; /* Soft muted brown for accents */
+    --text-color: #4e342e; /* Darker brown for text */
+    --highlight-color: #a1887f; /* Muted clay color for highlights */
 }
 
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    font-size: 1.8rem; /* Slightly larger for readability */
+    line-height: 1.6;
+    background-image: url('https://www.transparenttextures.com/patterns/white-paper.png'); /* Subtle paper texture */
 }
 
-/* Updated header styles */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem 9%;
-    background: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--primary-color);
+    padding: 1.5rem 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .logo {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
+    font-size: 3.2rem;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'EB Garamond', serif; /* Elegant serif font */
 }
 
 .navbar {
     display: flex;
-    align-items: center;
+    gap: 2.5rem;
 }
 
 .navbar a {
-    font-size: 1.7rem;
-    color: var(--text-color);
-    font-weight: 500;
-    margin-left: 3.5rem;
-    transition: .3s;
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: 'Merriweather', serif;
+    transition: color 0.3s;
 }
 
-.navbar a:hover, .navbar a.active {
-    color: var(--main-color);
+.navbar a:hover {
+    color: var(--accent-color);
 }
 
 #menu-icon {
-    font-size: 3.6rem;
-    color: var(--text-color);
-    cursor: pointer;
-    display: none; /* Displayed in mobile view */
+    display: none; /* Display for mobile */
 }
 
-/* Home section styles */
-.home {
-    display: flex;
-    align-items: center;
-    padding: 0 9%;
-    justify-content: space-between;
-    min-height: 100vh;
-}
-
-.my-img { 
-    display: flex;
-    justify-content: center;
-    width: 40rem;
-}
-
-.my-img img {
-    width: 30rem;
-    border-radius: 50%;
-}
-
-.home-content {
-    max-width: 60rem;
-}
-
-.home-content h1 {
-    font-size: 4.5rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-.home-content .text-animate {
-    font-size: 3.2rem;
-    color: var(--main-color);
-    font-weight: 700;
-}
-
-/* Contact button styles */
-.btn-box {
-    display: flex;
-    justify-content: space-between;
-    width: 34.5rem;
-    margin-top: 2rem;
-}
-
+/* Button Styling */
 .btn-box .btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 15rem;
-    height: 4rem;
-    background: var(--main-color);
-    border: .2rem solid var(--main-color);
-    border-radius: .8rem;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--bg-color);
-    cursor: pointer;
-    transition: .5s;
+    background: var(--highlight-color);
+    color: #fff;
+    padding: 1rem 3rem;
+    border-radius: 25px; /* Rounded for soft look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    font-family: 'EB Garamond', serif;
 }
 
 .btn-box .btn:hover {
-    color: var(--main-color);
-    background-color: transparent;
+    background: var(--primary-color);
+    color: #fff;
 }
 
-.home-sci {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    gap: 1rem;
-}
-
-.home-sci a {
-    display: inline-flex;
-    justify-content: center;
+/* Home Section */
+.home {
+    display: flex; /* Keep flex for better alignment */
     align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background: var(--main-color);
-    border-radius: 50%;
-    color: var(--bg-color);
-    font-size: 2rem;
-    transition: .5s;
+    justify-content: space-between;
+    padding: 12rem 5%;
+    margin-top: 7rem;
 }
 
-.home-sci a:hover {
-    background-color: var(--second-bg-color);
+.home-info {
+    flex: 1;
+    padding-right: 2rem;
 }
 
-/* About section styles */
+.home-content h1 {
+    font-size: 4.5rem; /* Adjusted for balance */
+    color: var(--primary-color);
+    font-family: 'EB Garamond', serif;
+}
+
+.home-content .text-animate {
+    color: var(--highlight-color);
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.my-img {
+    width: 100%;
+    max-width: 35rem;
+}
+
+.my-img img {
+    width: 100%;
+    border-radius: 10px; /* Subtle rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    border: 2px solid var(--primary-color); /* Slight border for definition */
+}
+
+/* About Section */
 .about {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    gap: 3rem;
+    padding: 6rem 5%;
+    background: #fff;
+    margin: 6rem 0;
     align-items: center;
-    background: var(--second-bg-color);
-    padding: 5rem 9%;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.about-details {
-    width: 60%;
-    text-align: center;
+    border: 1px solid var(--accent-color); /* Border for vintage effect */
 }
 
 .about-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30rem;
-    height: 30rem;
-    border-radius: 50%;
-    position: relative;
+    flex: 1;
+    text-align: center;
 }
 
 .about-img img {
-    width: 100%;
+    width: 80%;
     border-radius: 50%;
-    border: .2rem solid var(--main-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 4px solid var(--highlight-color); /* Different border color */
 }
 
-/* Footer styles */
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem 9%;
-    background: var(--bg-color);
-    color: var(--text-color);
+.about-details {
+    flex: 2;
 }
 
-.footer .btn-box, .footer .home-sci {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer .btn-box a, .footer .home-sci a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background: transparent;
-    border: 2px solid var(--main-color);
+.about-content p {
     font-size: 1.6rem;
-    color: var(--main-color);
-    text-decoration: none;
+    line-height: 1.8;
+    text-align: justify;
+    font-family: 'Merriweather', serif;
 }
 
-.footer .btn-box a:hover, .footer .home-sci a:hover {
-    background-color: var(--main-color);
-    color: var(--bg-color);
+/* Skills Section (New Section) */
+.skills {
+    background: var(--bg-color);
+    padding: 5rem 5%;
+    border-top: 2px solid var(--primary-color); /* Subtle top border */
+    margin: 6rem 0;
 }
 
-/* Responsive adjustments */
+.skills h2 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'EB Garamond', serif;
+}
+
+.skill-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.skill-bar .skill-title {
+    width: 20%;
+    font-weight: 500;
+}
+
+.skill-bar .progress-bar {
+    width: 70%;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 1.8rem;
+    position: relative;
+}
+
+.skill-bar .progress-bar .progress {
+    height: 100%;
+    background: var(--highlight-color);
+    width: 0; /* Animation fills this */
+    transition: width 1s ease-in-out;
+}
+
+/* Project Section */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #fff; /* Cleaner background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+}
+
+.footer a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--accent-color);
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    .navbar {
-        display: none; /* Hide in mobile view */
-    }
-
-    #menu-icon {
-        display: block; /* Show in mobile view */
-    }
-
-    .navbar.active {
-        display: block; /* Show navbar on menu click */
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--bg-color);
+    .header {
+        flex-direction: column;
     }
 
     .home {
         flex-direction: column;
-        text-align: center;
-        padding-top: 12rem; /* Adjust for fixed header */
+        align-items: center;
     }
 
     .about {
         flex-direction: column;
-        padding: 4rem 4%;
+        text-align: center;
     }
 
-    .portfolio-container,
-    .publication-container {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    .portfolio-container {
+        grid-template-columns: 1fr;
     }
 }
