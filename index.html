@@ -1,90 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yudheksha's Bookish Portfolio</title>
+    <title>Rachana's Portfolio</title>
     <link rel="stylesheet" href="app.css">
+
+    <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- header design -->
     <header class="header top">
-        <a href="#" class="logo">Book<span>Haven</span></a>
+        <a href="#" class="logo">Life<span>story.</span></a>
         <div class="bx bx-menu" id="menu-icon"></div>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
+            <a href="#about">About me</a>
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
+            <a href="#tech-stack">Tech Stack</a>
+            <a href="#portfolio">Projects</a>
         </nav>
     </header>
 
-    <!-- Home Section -->
+    <!-- home section design -->
     <section class="home" id="home">
         <div class="home-info">
             <div class="home-content left">
-                <h1>Hello! I’m <span>Yudheksha GK</span></h1>
-                <h3 class="text-animate">I love being a <span class="multiple-text"></span></h3>
-                <p>An avid learner and developer with a love for books, vintage aesthetics, and clean code. Currently diving deep into data science, machine learning, and software development.</p>
+                <h1>Hi, <br> I'm <span>Rachana Mahapatra</span></h1>
+                <h3 class="text-animate">I'm a <span class="multiple-text"></span></h3>
+                <p>MS BA & AI grad student at University of Texas at Dallas | Expertise in Business Analytics, Data Engineering, Data Science, and Machine Learning.</p>
                 <div class="btn-box">
-                    <a href="mailto:yugokavi@iu.edu" class="btn">Get In Touch</a>
-                    <a href="https://drive.google.com/file/d/1OH3rDLyWd9wrVsmRKA2Ob20hZuBGTCUe/view?usp=sharing" class="btn" target="_blank">View My Resume</a>
+                    <a href="mailto:rachanamahapatra197@gmail.com" class="btn">Contact Me</a>
+                    <a href="https://drive.google.com/file/d/1qssso37jUnphGk2WtkfxY0eesXVDmZYx/view?usp=sharing" class="btn" target="_blank">My Resume</a>
                 </div>
             </div>
 
-            <div class="my-img right">
-                <img src="./assets/memoji.jpg" alt="profile image">
+            <div class="home-sci">
+                <a href="https://www.linkedin.com/in/rachana-mahapatra" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/mrachana19" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/rachanamahapatra19" target="_blank"><i class='bx bxl-instagram'></i></a>
             </div>
+        </div>
+
+        <div class="my-img right">
+            <img src="./assets/intro.jpg" alt="profile image">
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- about section design -->
     <section class="about" id="about">
         <div class="about-img left">
-            <img src="./assets/profile.jpg" alt="about image">
+            <img src="./assets/me.jpg" alt="about image" class="about-img-2">
+            <span class="circle-spin"></span>
         </div>
 
         <div class="about-details right">
             <h2 class="heading">About <span>Me</span></h2>
             <div class="about-content">
-                <p>
-                    Welcome to my little corner of the internet! Here, I'm blending my passion for technology and storytelling. Whether it's building robust applications or curating stories from data, I strive to make each project a masterpiece. If you're a fellow book lover or a tech enthusiast, let's connect!
+                <p style="text-align: justify;">
+                    Hey there! I'm Rachana, a Data Engineer and a Master's student in Business Analytics at The University of Texas at Dallas. With over 3 years of experience working as a Business Analyst and Data Engineer across diverse industries like travel, healthcare, and finance, I specialize in building robust data pipelines, optimizing ETL processes, and utilizing Machine Learning and AI to transform data into impactful insights.
+
+                    In my current role as a Data Engineer, I thrive on solving complex data challenges and creating solutions that drive meaningful results. My work is driven by a passion for innovation and a deep curiosity for how data can revolutionize decision-making.
+
+                    Beyond my professional life, I’m an ambivert who finds joy in both deep conversations and creative pursuits. I love painting, writing, and constantly seeking new experiences. My adventurous spirit has led me to skydiving, parasailing, deep water walking, and rafting, always pushing me to explore beyond the ordinary.
+
+                    If you’re intrigued by data, creativity, or a good adventure story, let’s connect and see where our paths might cross!
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <h2 class="heading">Skills</h2>
-        <div class="skill-bar">
-            <div class="skill-title">Python</div>
-            <div class="progress-bar">
-                <div class="progress" style="width: 90%;"></div>
+    <!-- experience section design -->
+    <section>
+        <div class="education-column right" id="experience">
+            <h2 class="heading"><span>Experience</span></h2>
+            <div class="education-box">
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="bx bxs-calendar"></i>May, 2024 - Present</div>
+                        <h3>Data Engineer, Aesthetic Record LLC</h3>
+                        <p>
+                            <ul>
+                                <li>Reduced migration time by ~75% by optimizing ETL processes using AWS Glue for EMR, EHR records.</li>
+                                <li>Designed and implemented a HIPAA-compliant S3 data lake, reducing patient document retrieval times by ~40%.</li>
+                                <li>Automated web scraping, eliminating manual data entry for over 200,000 patient documents and images.</li>
+                                <li>Improved processing efficiency by 60% with Python libraries streamlining data extraction and migration.</li>
+                                <li>Deployed and maintained over 50 automation scripts on Git, ensuring seamless deployment and version control.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="bx bxs-calendar"></i>April, 2022 - June, 2023</div>
+                        <h3>Business Analyst, Aviation World</h3>
+                        <p>
+                            <ul>
+                                <li>Boosted customer satisfaction by ~17% with personalized recommendations using SQL in Synapse Analytics.</li>
+                                <li>Cut booking process time by ~30% by streamlining workflows with Python scripts and Azure Data Factory (ADF).</li>
+                                <li>Amplified annual revenue by ~15% with seasonal pricing models using machine learning algorithms in Python.</li>
+                                <li>Saved 10 hours per week in decision-making with real-time Tableau KPI dashboards on Synapse Analytics data.</li>
+                                <li>Augmented ~12% market expansion with market research and analysis using SQL and Travelport data.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="bx bxs-calendar"></i>January, 2021 - April, 2022</div>
+                        <h3>Data Engineer, Tata Consultancy Services</h3>
+                        <p>
+                            <ul>
+                                <li>Optimized ETL by 40% by resolving data mapping in BRDs, integrating credit and loan data into the warehouse.</li>
+                                <li>Orchestrated up to 100 batch jobs using Airflow, enhancing data reliability for risk and analytics teams.</li>
+                                <li>Reduced system downtime by ~20% by implementing partitioned tables for financial reporting snapshots.</li>
+                                <li>Ameliorated data quality by ~30% via automated validation, ensuring credit risk data met Basel III standards.</li>
+                                <li>Streamlined data accessibility by designing and optimizing indexes, improving query performance by ~35%.</li>
+                                <li>Slashed migration time by ~45 hours, aligning Oracle schema with Azure requirements to enhance scalability.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="bx bxs-calendar"></i>April, 2022 - October, 2022</div>
+                        <h3>Data Science and Business Analytics Intern - The Sparks Foundation</h3>
+                        <p>
+                            <ul>
+                                <li>Built a predictive model using Linear Regression to estimate the percentage of marks students are expected to achieve based on their study hours, achieving an R-squared value of 93%.</li>
+                                <li>Designed and maintained a detailed Tableau dashboard to visualize and analyze COVID-19 trends using the John Hopkins COVID dataset, enabling more informed and data-driven decision-making through clear and actionable insights.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- Add more skill bars as needed -->
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="btn-box">
-            <a href="https://drive.google.com/file/d/1OH3rDLyWd9wrVsmRKA2Ob20hZuBGTCUe/view?usp=sharing">My Resume</a>
-            <a href="https://www.linkedin.com/in/yudheksha" target="_blank"><i class="bx bxl-linkedin"></i></a>
-            <a href="https://github.com/yudheksha" target="_blank"><i class='bx bxl-github'></i></a>
+    <!-- education section design -->
+    <section class="education" id="education">
+        <div class="education-row">
+            <div class="education-column left">
+                <h2 class="heading">Education</h2>
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class="bx bxs-calendar"></i>August 2023 - May 2025</div>
+                            <h3>Master of Science in Business Analytics - The University of Texas at Dallas</h3>
+                            <p>Relevant Coursework: Big Data Engineering, Applied Machine Learning, Deep Learning</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class="bx bxs-calendar"></i>July 2016 - September 2020</div>
+                            <h3>Bachelor of Technology in Aeronautical Engineering - Jawaharlal Nehru Technological University, India</h3>
+                            <p>Relevant Coursework: Statistics, Quantum Mechanics, C++, Data Structures, Computational Fluid Dynamics, Numerical Methods.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- Tech Stack section -->
+    <section id="tech-stack" class="tech-stack">
+        <h2 class="heading">Tech Stack</h2>
+        <div class="tech-categories">
+
+            <!-- Programming Languages -->
+            <div class="tech-category">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>R</li>
+                    <li>SQL</li>
+                    <li>C++</li>
+                    <li>Scala</li>
+                    <li>Shell Scripting</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+
+            <!-- Data Engineering Tools -->
+            <div class="tech-category">
+                <h3>Data Engineering</h3>
+                <ul>
+                    <li>Apache Spark</li>
+                    <li>Kafka</li>
+                    <li>Apache Airflow</li>
+                    <li>Hadoop</li>
+                    <li>Informatica</li>
+                    <li>dbt</li>
+                    <li>PySpark</li>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                    <li>Git</li>
+                    <li>Jenkins (CI/CD)</li>
+                </ul>
+            </div>
+
+            <!-- Databases and Data Warehousing -->
+            <div class="tech-category">
+                <h3>Databases & Data Warehousing</h3>
+                <ul>
+                    <li>Snowflake</li>
+                    <li>Teradata</li>
+                    <li>MySQL</li>
+                    <li>SQL Server</li>
+                    <li>Oracle</li>
+                    <li>MongoDB</li>
+                    <li>DynamoDB</li>
+                    <li>Redshift</li>
+                    <li>RDS</li>
+                    <li>PostgreSQL</li>
+                    <li>Elasticsearch</li>
+                </ul>
+            </div>
+
+            <!-- Cloud Platforms -->
+            <div class="tech-category">
+                <h3>Cloud Platforms</h3>
+                <ul>
+                    <li>AWS (S3, Lambda, DynamoDB, SageMaker, Glue, Athena, Redshift)</li>
+                    <li>Azure (Data Factory, Synapse Analytics)</li>
+                    <li>GCP (BigQuery, Cloud Functions, Cloud Pub/Sub)</li>
+                </ul>
+            </div>
+
+            <!-- Data Science and Machine Learning -->
+            <div class="tech-category">
+                <h3>Data Science & Machine Learning</h3>
+                <ul>
+                    <li>TensorFlow</li>
+                    <li>PyTorch</li>
+                    <li>Scikit-learn</li>
+                    <li>ARIMA</li>
+                    <li>Prophet</li>
+                    <li>spaCy</li>
+                    <li>Hugging Face Transformers</li>
+                    <li>AutoML</li>
+                    <li>MLlib (Spark)</li>
+                </ul>
+            </div>
+
+            <!-- Data Visualization -->
+            <div class="tech-category">
+                <h3>Data Visualization</h3>
+                <ul>
+                    <li>Power BI</li>
+                    <li>Tableau</li>
+                    <li>Quicksight</li>
+                    <li>Matplotlib</li>
+                    <li>Seaborn</li>
+                    <li>D3.js</li>
+                    <li>Gephi</li>
+                </ul>
+            </div>
+
+            <!-- Tools & Utilities -->
+            <div class="tech-category">
+                <h3>Tools & Utilities</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>Jenkins</li>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                    <li>Gradle</li>
+                    <li>Jira</li>
+                    <li>Postman</li>
+                    <li>PowerShell</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- portfolio section design -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading top"><span>Projects</span></h2>
+        <div class="portfolio-container bottom">
+            <!-- Project 1: Diabetes Risk Prediction -->
+            <div class="portfolio-box">
+                <img src="./assets/diabetes_risk_prediction.jpg" alt="Diabetes Risk Prediction">
+                <div class="portfolio-layer">
+                    <h4>Diabetes Risk Prediction</h4>
+                    <div class="project-links">
+                        <a href="https://github.com/diabetes-risk-prediction" target="_blank"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: HeatEx FanGuard -->
+            <div class="portfolio-box">
+                <img src="./assets/heatex_fanguard.jpg" alt="HeatEx FanGuard">
+                <div class="portfolio-layer">
+                    <h4>HeatEx FanGuard : Predictive Maintenance System</h4>
+                    <div class="project-links">
+                        <a href="https://github.com/heatex-fanguard" target="_blank"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: E-commerce Data Streamliner -->
+            <div class="portfolio-box">
+                <img src="./assets/ecommerce_data_streamliner.jpg" alt="E-commerce Data Streamliner">
+                <div class="portfolio-layer">
+                    <h4>RetailMind-Data-Framework</h4>
+                    <div class="project-links">
+                        <a href="https://github.com/mrachana19/RetailMind-Data-Framework" target="_blank"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem;">
+        <div class="btn-box" style="margin-left: 4rem;">
+            <a href="https://drive.google.com/file/d/1qssso37jUnphGk2WtkfxY0eesXVDmZYx/view?usp=sharing" target="_blank">My Resume</a>
+            <a href="https://www.linkedin.com/in/rachana-mahapatra" target="_blank"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/mrachana19" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+
         <div>
-            <p>&copy; 2024 Yudheksha GK. All rights reserved.</p>
+            <p>Copyright &copy; 2024 by Rachana Mahapatra | All Rights Reserved.</p>
             <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
         </div>
     </footer>
 
     <script src="app.js"></script>
 </body>
+
 </html>
