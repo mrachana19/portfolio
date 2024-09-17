@@ -573,48 +573,55 @@ span {
     margin: 0 auto; /* Center the grid */
 }
 
-.certification-box {
-    background: var(--bg-color); /* Same background color */
-    padding: 2rem; /* Padding inside the box */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Box shadow for depth */
-    transition: transform 0.3s ease; /* Smooth transform on hover */
+.certifications {
+    background: var(--second-bg-color);
+    padding: 5rem 9%; /* Adjust padding as needed */
+    text-align: left;
+    color: var(--text-color);
 }
 
-.certification-box:hover {
-    transform: translateY(-10px); /* Hover effect to lift the box */
+.certifications .heading {
+    color: var(--main-color);
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.certification-content ul {
-    list-style: none; /* Remove list style */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+.certification-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
-.certification-content ul li {
-    margin-bottom: 1.5rem; /* Space between certification items */
+.certification-category {
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.certification-content ul li h4 {
-    font-size: 1.8rem; /* Adjusted font size */
-    font-weight: 700; /* Bold font for titles */
-    color: var(--main-color); /* Same color as Tech Stack titles */
-    margin-bottom: 0.5rem; /* Space below title */
+.certification-category h3 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
 }
 
-.certification-content ul li p {
-    font-size: 1.6rem; /* Font size for institution name */
-    color: var(--text-color); /* Text color */
+.certification-category ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Responsive adjustments */
+.certification-category ul li {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding: 0.5rem 0;
+}
+
 @media (max-width: 768px) {
-    .certifications-container {
-        grid-template-columns: 1fr; /* Single column for mobile screens */
+    .certification-categories {
+        grid-template-columns: 1fr;
     }
 }
-
-
 
 .portfolio {
     min-height: auto;
