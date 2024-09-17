@@ -559,80 +559,54 @@ span {
 }
 
 .certifications {
-    background: var(--second-bg-color); /* Full-width blue background */
-    padding: 5rem 9%; /* Maintain padding to keep the blue block size the same */
-    text-align: center; /* Center-align content */
+    background: var(--second-bg-color);
+    padding: 5rem 9%; /* Adjust padding as needed */
+    text-align: left;
     color: var(--text-color);
-    width: 100vw; /* Full viewport width */
-    box-sizing: border-box; /* Include padding in the width */
 }
 
 .certifications .heading {
     color: var(--main-color);
     font-size: 4rem;
     text-align: center;
-    margin-bottom: 3rem; /* Maintain consistent spacing */
+    margin-bottom: 3rem;
 }
 
 .certification-categories {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(4, 1fr); /* Four columns in one row */
-    gap: 2rem; /* Space between the boxes */
-    max-width: 1200px; /* Centered content with max width */
-    margin: 0 auto; /* Center the grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
 .certification-category {
-    background: var(--bg-color); /* White background */
-    padding: 1.5rem; /* Uniform padding for all boxes */
+    background: var(--bg-color);
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: auto; /* Let height adjust based on content */
-    min-height: 180px; /* Minimum height to keep boxes uniform */
-    box-sizing: border-box; /* Includes padding and border in element's total width and height */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .certification-category h3 {
-    font-size: 1.8rem; /* Adjusted font size for better fit */
+    font-size: 2rem;
     color: var(--main-color);
-    margin-bottom: 0.5rem; /* Reduced margin for neatness */
+    margin-bottom: 1.5rem;
 }
 
 .certification-category ul {
     list-style: none;
     padding: 0;
-    margin: 0; /* Remove default margin */
 }
 
 .certification-category ul li {
-    font-size: 1.4rem; /* Adjusted font size for better balance */
+    font-size: 1.6rem;
     line-height: 1.5;
-    padding: 0.3rem 0;
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 1024px) {
-    .certification-categories {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
-    }
+    padding: 0.5rem 0;
 }
 
 @media (max-width: 768px) {
     .certification-categories {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
+        grid-template-columns: 1fr;
     }
 }
-
-@media (max-width: 991px) {
-    .certifications {
-        padding: 5rem 4%; /* Maintain padding on smaller screens */
-    }
-}
-
-
 
 .portfolio {
     min-height: auto;
