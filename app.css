@@ -601,9 +601,14 @@ span {
 }
 
 .certification-category ul li {
-    font-size: 1.6rem;
-    line-height: 1.5;
-    padding: 0.5rem 0;
+    font-size: 1.6rem; /* Font size for certification list items */
+    line-height: 1.8;  /* Line height for better readability */
+    padding: 0.5rem 0; /* Adds padding around the list items */
+    margin-bottom: 0.5rem; /* Adds space between the list items */
+    color: var(--text-color); /* Ensures consistent text color */
+    display: flex; /* Aligns text vertically */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between; /* Adds spacing between items */
 }
 
 /* Responsive design for smaller screens */
