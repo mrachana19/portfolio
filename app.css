@@ -565,21 +565,6 @@ span {
     color: var(--text-color);
 }
 
-.certifications-container {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(4, 1fr); /* Three columns like Tech Stack */
-    gap: 2rem; /* Space between the boxes */
-    max-width: 1200px; /* Max width to center */
-    margin: 0 auto; /* Center the grid */
-}
-
-.certifications {
-    background: var(--second-bg-color);
-    padding: 5rem 9%; /* Adjust padding as needed */
-    text-align: left;
-    color: var(--text-color);
-}
-
 .certifications .heading {
     color: var(--main-color);
     font-size: 4rem;
@@ -588,16 +573,21 @@ span {
 }
 
 .certification-categories {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Three columns like Tech Stack */
+    gap: 2rem; /* Space between the boxes */
+    max-width: 1200px; /* Max width to center */
+    margin: 0 auto; /* Center the grid */
 }
 
 .certification-category {
     background: var(--bg-color);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .certification-category h3 {
@@ -617,9 +607,16 @@ span {
     padding: 0.5rem 0;
 }
 
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .certification-categories {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}
+
+@media (max-width: 991px) {
+    .certifications {
+        padding: 5rem 4%; /* Adjust padding for smaller screens */
     }
 }
 
