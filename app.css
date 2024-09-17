@@ -559,29 +559,30 @@ span {
 }
 
 .certifications {
-    background: var(--second-bg-color); /* Background similar to the Tech Stack section */
-    padding: 5rem 9%; /* Padding around the section */
+    background: var(--second-bg-color); /* Same background as Tech Stack */
+    padding: 5rem 9%; /* Similar padding */
     text-align: left;
-    color: var(--text-color); /* Text color */
+    color: var(--text-color);
 }
 
 .certifications-container {
-    max-width: 1200px; /* Adjust container width */
-    margin: 0 auto; /* Center the container */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Three columns like Tech Stack */
+    gap: 2rem; /* Space between the boxes */
+    max-width: 1200px; /* Max width to center */
+    margin: 0 auto; /* Center the grid */
 }
 
 .certification-box {
-    display: flex; /* Flexbox layout for certifications */
-    justify-content: center; /* Center content */
-}
-
-.certification-content {
-    background: var(--bg-color); /* Background color of certification box */
+    background: var(--bg-color); /* Same background color */
     padding: 2rem; /* Padding inside the box */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    width: 100%; /* Full width */
-    max-width: 1000px; /* Max width for certification content */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Box shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+.certification-box:hover {
+    transform: translateY(-10px); /* Hover effect to lift the box */
 }
 
 .certification-content ul {
@@ -591,12 +592,13 @@ span {
 }
 
 .certification-content ul li {
-    margin-bottom: 2rem; /* Space between certifications */
+    margin-bottom: 1.5rem; /* Space between certification items */
 }
 
 .certification-content ul li h4 {
-    font-size: 2rem; /* Font size for certification title */
-    color: var(--main-color); /* Main color for title */
+    font-size: 1.8rem; /* Adjusted font size */
+    font-weight: 700; /* Bold font for titles */
+    color: var(--main-color); /* Same color as Tech Stack titles */
     margin-bottom: 0.5rem; /* Space below title */
 }
 
@@ -607,16 +609,11 @@ span {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .certification-content {
-        padding: 1.5rem; /* Reduce padding on smaller screens */
-    }
-    .certification-content ul li h4 {
-        font-size: 1.8rem; /* Adjust font size for smaller screens */
-    }
-    .certification-content ul li p {
-        font-size: 1.4rem; /* Adjust font size for smaller screens */
+    .certifications-container {
+        grid-template-columns: 1fr; /* Single column for mobile screens */
     }
 }
+
 
 
 .portfolio {
