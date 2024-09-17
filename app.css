@@ -578,6 +578,7 @@ span {
     display: grid; /* Use grid layout */
     grid-template-columns: repeat(4, 1fr); /* Four columns in one row */
     gap: 1.5rem; /* Smaller gap for tighter layout */
+    max-width: 100%; /* Make sure it takes full available width */
 }
 
 .certification-category {
@@ -588,7 +589,10 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 150px; /* Controlled height for consistency */
+    height: 200px; /* Fixed height for uniformity */
+    max-height: 200px; /* Prevents content overflow */
+    overflow: hidden; /* Ensures no overflow */
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
 }
 
 .certification-category h3 {
@@ -601,6 +605,7 @@ span {
     list-style: none;
     padding: 0;
     margin: 0; /* Remove default margin */
+    flex-grow: 1; /* Ensures the list takes remaining space */
 }
 
 .certification-category ul li {
@@ -627,6 +632,7 @@ span {
         padding: 4rem 4%; /* Adjust padding for smaller screens */
     }
 }
+
 
 .portfolio {
     min-height: auto;
