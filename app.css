@@ -561,7 +561,6 @@ span {
 .certifications {
     background: var(--second-bg-color);
     padding: 5rem 12%;
-    text-align: left;
     color: var(--text-color);
 }
 
@@ -574,21 +573,19 @@ span {
 
 .certification-categories {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 equal-width columns */
     gap: 2rem; /* Adds space between grid items */
-    align-items: stretch; /* Ensures all items are of equal height */
 }
 
 .certification-category {
     background: var(--bg-color);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column; /* Ensures inner content flows vertically */
-    justify-content: space-between; /* Space distribution within container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 100%; /* Makes all items the same height */
-    width: 100%; /* Ensures all items have the same width */
+    display: flex;
+    flex-direction: column; /* Vertical alignment of content */
+    justify-content: space-between; /* Space distribution within the container */
 }
 
 .certification-category h3 {
