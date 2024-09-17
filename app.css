@@ -567,7 +567,7 @@ span {
 
 .certifications-container {
     display: grid; /* Use grid layout */
-    grid-template-columns: repeat(3, 1fr); /* Three columns like Tech Stack */
+    grid-template-columns: repeat(4, 1fr); /* Three columns like Tech Stack */
     gap: 2rem; /* Space between the boxes */
     max-width: 1200px; /* Max width to center */
     margin: 0 auto; /* Center the grid */
