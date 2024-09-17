@@ -560,7 +560,7 @@ span {
 
 .certifications {
     background: var(--second-bg-color);
-    padding: 5rem 9%; /* Adjust padding as needed */
+    padding: 5rem 12%; /* Adjust padding as needed */
     text-align: left;
     color: var(--text-color);
 }
