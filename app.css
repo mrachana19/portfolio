@@ -558,6 +558,67 @@ span {
     width: 55%;
 }
 
+.certifications {
+    background: var(--second-bg-color); /* Background similar to the Tech Stack section */
+    padding: 5rem 9%; /* Padding around the section */
+    text-align: left;
+    color: var(--text-color); /* Text color */
+}
+
+.certifications-container {
+    max-width: 1200px; /* Adjust container width */
+    margin: 0 auto; /* Center the container */
+}
+
+.certification-box {
+    display: flex; /* Flexbox layout for certifications */
+    justify-content: center; /* Center content */
+}
+
+.certification-content {
+    background: var(--bg-color); /* Background color of certification box */
+    padding: 2rem; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    width: 100%; /* Full width */
+    max-width: 1000px; /* Max width for certification content */
+}
+
+.certification-content ul {
+    list-style: none; /* Remove list style */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.certification-content ul li {
+    margin-bottom: 2rem; /* Space between certifications */
+}
+
+.certification-content ul li h4 {
+    font-size: 2rem; /* Font size for certification title */
+    color: var(--main-color); /* Main color for title */
+    margin-bottom: 0.5rem; /* Space below title */
+}
+
+.certification-content ul li p {
+    font-size: 1.6rem; /* Font size for institution name */
+    color: var(--text-color); /* Text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .certification-content {
+        padding: 1.5rem; /* Reduce padding on smaller screens */
+    }
+    .certification-content ul li h4 {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+    .certification-content ul li p {
+        font-size: 1.4rem; /* Adjust font size for smaller screens */
+    }
+}
+
+
 .portfolio {
     min-height: auto;
     padding-bottom: 7rem;
