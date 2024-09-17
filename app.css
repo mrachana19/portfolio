@@ -560,7 +560,7 @@ span {
 
 .certifications {
     background: var(--second-bg-color);
-    padding: 5rem 12%; /* Adjust padding as needed */
+    padding: 5rem 12%;
     text-align: left;
     color: var(--text-color);
 }
@@ -574,8 +574,9 @@ span {
 
 .certification-categories {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    gap: 2rem; /* Adds space between grid items */
+    align-items: stretch; /* Ensures all items are of equal height */
 }
 
 .certification-category {
@@ -583,6 +584,11 @@ span {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Ensures inner content flows vertically */
+    justify-content: space-between; /* Space distribution within container */
+    height: 100%; /* Makes all items the same height */
+    width: 100%; /* Ensures all items have the same width */
 }
 
 .certification-category h3 {
@@ -594,6 +600,7 @@ span {
 .certification-category ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Ensure no margin around the list */
 }
 
 .certification-category ul li {
@@ -602,9 +609,10 @@ span {
     padding: 0.5rem 0;
 }
 
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .certification-categories {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Switch to single column on smaller screens */
     }
 }
 
