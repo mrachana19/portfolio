@@ -559,53 +559,52 @@ span {
 }
 
 .certifications {
-    background: var(--second-bg-color); /* Consistent background */
-    padding: 4rem 6%; /* Reduced padding for a more compact layout */
-    text-align: left;
+    background: var(--second-bg-color); /* Full-width blue background */
+    padding: 5rem 9%; /* Maintain padding to keep the blue block size the same */
+    text-align: center; /* Center-align content */
     color: var(--text-color);
-    max-width: 1200px; /* Max width to prevent excessive stretching */
-    margin: 0 auto; /* Center the section */
+    width: 100vw; /* Full viewport width */
+    box-sizing: border-box; /* Include padding in the width */
 }
 
 .certifications .heading {
     color: var(--main-color);
     font-size: 4rem;
     text-align: center;
-    margin-bottom: 2rem; /* Adjusted margin for better spacing */
+    margin-bottom: 3rem; /* Maintain consistent spacing */
 }
 
 .certification-categories {
     display: grid; /* Use grid layout */
     grid-template-columns: repeat(4, 1fr); /* Four columns in one row */
-    gap: 1.5rem; /* Smaller gap for tighter layout */
-    max-width: 100%; /* Make sure it takes full available width */
+    gap: 2rem; /* Space between the boxes */
+    max-width: 1200px; /* Centered content with max width */
+    margin: 0 auto; /* Center the grid */
 }
 
 .certification-category {
-    background: var(--bg-color);
-    padding: 1.5rem; /* Adjusted padding inside the boxes */
+    background: var(--bg-color); /* White background */
+    padding: 1.5rem; /* Uniform padding for all boxes */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 200px; /* Fixed height for uniformity */
-    max-height: 200px; /* Prevents content overflow */
-    overflow: hidden; /* Ensures no overflow */
-    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+    height: auto; /* Let height adjust based on content */
+    min-height: 180px; /* Minimum height to keep boxes uniform */
+    box-sizing: border-box; /* Includes padding and border in element's total width and height */
 }
 
 .certification-category h3 {
-    font-size: 1.8rem; /* Slightly smaller font for better fit */
+    font-size: 1.8rem; /* Adjusted font size for better fit */
     color: var(--main-color);
-    margin-bottom: 1rem; /* Adjusted margin */
+    margin-bottom: 0.5rem; /* Reduced margin for neatness */
 }
 
 .certification-category ul {
     list-style: none;
     padding: 0;
     margin: 0; /* Remove default margin */
-    flex-grow: 1; /* Ensures the list takes remaining space */
 }
 
 .certification-category ul li {
@@ -629,9 +628,10 @@ span {
 
 @media (max-width: 991px) {
     .certifications {
-        padding: 4rem 4%; /* Adjust padding for smaller screens */
+        padding: 5rem 4%; /* Maintain padding on smaller screens */
     }
 }
+
 
 
 .portfolio {
